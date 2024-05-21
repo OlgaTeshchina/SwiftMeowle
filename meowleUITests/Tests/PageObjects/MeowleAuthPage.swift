@@ -10,6 +10,7 @@ import XCTest
 private extension String {
     static let authorizationTextField = "Введите своё имя"
     static let authEnterButton = "Войти"
+    static let authScreenIdentifier = "authScreenViewController"
 }
 
 final class MeowleAuthPage: BasePage {
@@ -18,6 +19,7 @@ final class MeowleAuthPage: BasePage {
     
     private lazy var fieldText = app.textFields[.authorizationTextField]
     private lazy var enterButton = app.buttons[.authEnterButton]
+    private lazy var authScreen = app.otherElements[.authScreenIdentifier]
     
     // MARK: - Actions
     
@@ -39,6 +41,13 @@ final class MeowleAuthPage: BasePage {
     @discardableResult
     func tapEnterButton() -> MeowleAuthPage {
         enterButton.tap()
+        return self
+    }
+    
+    // Проверка, что экран "Авторизации" открылся
+    @discardableResult
+    func checkThatAuthScreenIsOpened() -> MeowleAuthPage {
+        XCTAssertTrue(authScreen.waitForExistence(timeout: .timeout))
         return self
     }
 }

@@ -48,6 +48,11 @@
 		9CC989DE2B83DE4A00BB2311 /* DispatchQueue+performOnMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC989DD2B83DE4A00BB2311 /* DispatchQueue+performOnMain.swift */; };
 		9CFC75192B9751E00069705F /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFC75182B9751E00069705F /* AuthViewController.swift */; };
 		9CFC751B2B9758020069705F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFC751A2B9758020069705F /* SettingsViewController.swift */; };
+		B65E50372BFD142D0028B1BD /* AuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E50362BFD142D0028B1BD /* AuthUITests.swift */; };
+		B65E503B2BFD1FAF0028B1BD /* AllNamesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E503A2BFD1FAF0028B1BD /* AllNamesPage.swift */; };
+		B65E503D2BFD240C0028B1BD /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E503C2BFD240C0028B1BD /* SettingsPage.swift */; };
+		B65E503F2BFD2DD20028B1BD /* CatDetailedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E503E2BFD2DD20028B1BD /* CatDetailedPage.swift */; };
+		B65E50412BFD31FC0028B1BD /* CatActionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E50402BFD31FC0028B1BD /* CatActionsUITests.swift */; };
 		E62C01FD50CC495E83649AD4 /* Pods_meowle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181B5B6FD731959884C412E0 /* Pods_meowle.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +115,11 @@
 		9CC989DD2B83DE4A00BB2311 /* DispatchQueue+performOnMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+performOnMain.swift"; sourceTree = "<group>"; };
 		9CFC75182B9751E00069705F /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		9CFC751A2B9758020069705F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B65E50362BFD142D0028B1BD /* AuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUITests.swift; sourceTree = "<group>"; };
+		B65E503A2BFD1FAF0028B1BD /* AllNamesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNamesPage.swift; sourceTree = "<group>"; };
+		B65E503C2BFD240C0028B1BD /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		B65E503E2BFD2DD20028B1BD /* CatDetailedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailedPage.swift; sourceTree = "<group>"; };
+		B65E50402BFD31FC0028B1BD /* CatActionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatActionsUITests.swift; sourceTree = "<group>"; };
 		DFF3AA313511264F58766A50 /* Pods-meowle-meowleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meowle-meowleUITests.release.xcconfig"; path = "Target Support Files/Pods-meowle-meowleUITests/Pods-meowle-meowleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +150,8 @@
 				37DCE6C72BC58F8200710D90 /* MeowleRatingUITests.swift */,
 				37A60C062BCA8A8600B9C499 /* AddNewCatUITests.swift */,
 				37DCE6C02BC57A0900710D90 /* PageObjects */,
+				B65E50362BFD142D0028B1BD /* AuthUITests.swift */,
+				B65E50402BFD31FC0028B1BD /* CatActionsUITests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -152,6 +164,9 @@
 				37DCE6C32BC57B2400710D90 /* MeowleSearchCatPage.swift */,
 				37DCE6C92BC58F9F00710D90 /* MeowleRatingPage.swift */,
 				3735C1702BCBE3B3000CA7AD /* AddNewCatPage.swift */,
+				B65E503A2BFD1FAF0028B1BD /* AllNamesPage.swift */,
+				B65E503C2BFD240C0028B1BD /* SettingsPage.swift */,
+				B65E503E2BFD2DD20028B1BD /* CatDetailedPage.swift */,
 			);
 			path = PageObjects;
 			sourceTree = "<group>";
@@ -503,14 +518,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65E503B2BFD1FAF0028B1BD /* AllNamesPage.swift in Sources */,
 				3735C1712BCBE3B3000CA7AD /* AddNewCatPage.swift in Sources */,
 				9C87A1E32BA72261005771DF /* BasePage.swift in Sources */,
+				B65E503D2BFD240C0028B1BD /* SettingsPage.swift in Sources */,
 				37A60C072BCA8A8600B9C499 /* AddNewCatUITests.swift in Sources */,
+				B65E50372BFD142D0028B1BD /* AuthUITests.swift in Sources */,
 				37DCE6C62BC57EBA00710D90 /* MeowleSearchCatUITests.swift in Sources */,
 				37DCE6CA2BC58F9F00710D90 /* MeowleRatingPage.swift in Sources */,
 				37DCE6C82BC58F8200710D90 /* MeowleRatingUITests.swift in Sources */,
 				37DCE6C42BC57B2400710D90 /* MeowleSearchCatPage.swift in Sources */,
+				B65E503F2BFD2DD20028B1BD /* CatDetailedPage.swift in Sources */,
 				37DCE6C22BC57A2D00710D90 /* MeowleAuthPage.swift in Sources */,
+				B65E50412BFD31FC0028B1BD /* CatActionsUITests.swift in Sources */,
 				9C6FC8382B5BCC6E00DACA64 /* meowleUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
