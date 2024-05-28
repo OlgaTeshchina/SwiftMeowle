@@ -2,7 +2,6 @@
 //  CatActionsUITests.swift
 //  meowleUITests
 //
-//  Created by Olga Teshchina on 21.05.2024.
 //
 
 import Foundation
@@ -14,7 +13,10 @@ private extension String {
     static let likeCounterAfter = "6"
 }
 
-final class CatActionsUITests : BasePage {
+final class LikeCatUITests : BasePage {
+    
+    // MARK: - Tests
+    
     func testLikeCat() {
         setNetworkStub(for: "core/cats/search",
                        jsonFilename: "core_cats_search")
@@ -32,7 +34,7 @@ final class CatActionsUITests : BasePage {
         CatDetailedPage()
             .checkThatDetailedScreenIsOpened()
             .checkLikeButtonCounter(expectedCounter: .likeCounterBefore)
-            .tapLikeButtonWithAccessibilityIdentifyer()
+            .tapLikeButton()
             .checkLikeButtonCounter(expectedCounter: .likeCounterAfter)
     }
 }

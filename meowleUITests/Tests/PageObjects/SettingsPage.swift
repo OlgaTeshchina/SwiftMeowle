@@ -2,7 +2,6 @@
 //  SettingsPage.swift
 //  meowleUITests
 //
-//  Created by Olga Teshchina on 21.05.2024.
 //
 
 import Foundation
@@ -14,15 +13,22 @@ private extension String {
 }
 
 final class SettingsPage : BasePage {
+    
+    // MARK: - Elements
+
     private lazy var settingsScreen = app.otherElements[.settingsScreenIdentifier]
     private lazy var logOutButton = app.buttons[.identyfyerLogOutButton]
     
+    // MARK: - Actions
+    
     // Тапнуть по кнопке c прописанным accessibilityIdentifyer
     @discardableResult
-    func tapLogOutButtonWithAccessibilityIdentifyer() -> SettingsPage {
+    func tapLogOutButton() -> SettingsPage {
         logOutButton.tap()
         return self
     }
+    
+    // MARK: - Asserts
     
     // Проверка, что экран "Настроек" открылся
     @discardableResult

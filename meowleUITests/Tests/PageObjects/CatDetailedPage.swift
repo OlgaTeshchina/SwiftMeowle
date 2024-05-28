@@ -2,7 +2,6 @@
 //  CatDetailedPage.swift
 //  meowleUITests
 //
-//  Created by Olga Teshchina on 21.05.2024.
 //
 
 import Foundation
@@ -15,15 +14,22 @@ private extension String {
 }
 
 final class CatDetailedPage : BasePage {
+    
+    // MARK: - Elements
+    
     private lazy var detailedScreen = app.otherElements[.detailedScreenIdentifier]
     private lazy var likeButton = app.buttons[.identyfyerLikeButton]
     
+    // MARK: - Actions
+    
     // Тапнуть по кнопке c прописанным accessibilityIdentifyer
     @discardableResult
-    func tapLikeButtonWithAccessibilityIdentifyer() -> CatDetailedPage {
+    func tapLikeButton() -> CatDetailedPage {
         likeButton.tap()
         return self
     }
+    
+    // MARK: - Asserts
     
     // Проверка, что экран открылся
     @discardableResult

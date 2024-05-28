@@ -2,13 +2,14 @@
 //  AllNamesPage.swift
 //  meowleUITests
 //
-//  Created by Olga Teshchina on 21.05.2024.
 //
 
 import Foundation
 import XCTest
 
 final class AllNamesPage : BasePage {
+    
+    // MARK: - Actions
     
     // Проверка наличия имени котика
     @discardableResult

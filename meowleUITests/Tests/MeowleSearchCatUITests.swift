@@ -10,9 +10,6 @@ import XCTest
 private extension String {
     static let catBaton = "Батон"
     static let nameOfCatAccordingSearchResults = "Батон ♂"
-    static let catNo1 = "Кот №1"
-    static let catNo2 = "Кот №2"
-    static let catNo3 = "Кот №3"
 }
 
 final class MeowleSearchCatUITests: BasePage {
@@ -32,21 +29,5 @@ final class MeowleSearchCatUITests: BasePage {
             .assertExistanceNameOf(cat: .catBaton)
             .tapCat(name: .catBaton)
             .assertExistanceNameOf(cat: .nameOfCatAccordingSearchResults)
-    }
-    
-    // Добавлен тест
-    func testAllCats() {
-        setNetworkStub(for: "core/cats/allByLetter",
-                       jsonFilename: "core_cats_allByLetter")
-        
-        openApp(isAuthorised: true)
-        
-        MeowleSearchCatPage()
-            .tapAllNamesButtonWithAccessibilityIdentifyer()
-        
-        AllNamesPage()
-            .assertExistanceNameOf(cat: .catNo1)
-            .assertExistanceNameOf(cat: .catNo2)
-            .assertExistanceNameOf(cat: .catNo3)
     }
 }

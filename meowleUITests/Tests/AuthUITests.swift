@@ -2,7 +2,6 @@
 //  AuthUITests.swift
 //  meowleUITests
 //
-//  Created by Olga Teshchina on 21.05.2024.
 //
 
 import Foundation
@@ -13,6 +12,9 @@ private extension String {
 }
 
 final class AuthUITests : BasePage {
+    
+    // MARK: - Tests
+    
     func testLogIn() {
         openApp(isAuthorised: false)
         
@@ -20,7 +22,6 @@ final class AuthUITests : BasePage {
             .taptextField()
             .typeTextTo(textField: .userName)
             .tapEnterButton()
-        
         MeowleSearchCatPage()
             .checkThatSearchScreenIsOpened()
     }
@@ -31,11 +32,9 @@ final class AuthUITests : BasePage {
         MeowleSearchCatPage()
             .checkThatSearchScreenIsOpened()
             .tapSettingsButton()
-        
         SettingsPage()
             .checkThatSettingsScreenIsOpened()
-            .tapLogOutButtonWithAccessibilityIdentifyer()
-        
+            .tapLogOutButton()
         MeowleAuthPage()
             .checkThatAuthScreenIsOpened()
     }

@@ -75,7 +75,7 @@ final class MeowleSearchCatPage: BasePage {
     
     // Тапнуть по кнопке c прописанным accessibilityIdentifyer
     @discardableResult
-    func tapAllNamesButtonWithAccessibilityIdentifyer() -> MeowleSearchCatPage {
+    func tapAllNamesButton() -> MeowleSearchCatPage {
         allNamesButtonWithIdentifyer.tap()
         return self
     }
