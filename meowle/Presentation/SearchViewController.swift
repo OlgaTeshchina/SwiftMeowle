@@ -28,6 +28,7 @@ final class SearchViewController: UIViewController {
     private lazy var allNamesButton = {
         let button = UIButton(configuration: UIButton.Configuration.bordered())
         button.setTitle("Все имена", for: .normal)
+        button.accessibilityIdentifier = "allNamesButton" // Добавлен идентификатор
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         return button
     }()

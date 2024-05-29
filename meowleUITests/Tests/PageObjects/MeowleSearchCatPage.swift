@@ -10,9 +10,11 @@ import XCTest
 private extension String {
     static let nameOfCat = "Введите имя котика"
     static let identyfyerSearchButton = "searchCatButton"
+    static let identyfyerAllNamesButton = "allNamesButton" // Добавилен идентификатор
     static let addButtonLabel = "Добавить"
     static let mainScreenIdentifier = "searchScreenViewController" 
     static let rating = "Рейтинг"
+    static let settings = "Настройки"
 }
 
 final class MeowleSearchCatPage: BasePage {
@@ -21,9 +23,11 @@ final class MeowleSearchCatPage: BasePage {
     
     private lazy var searchField = app.textFields[.nameOfCat]
     private lazy var searchButtonWithIdentifyer = app.buttons[.identyfyerSearchButton]
+    private lazy var allNamesButtonWithIdentifyer = app.buttons[.identyfyerAllNamesButton]
     private lazy var addButton = app.buttons[.addButtonLabel]
     private lazy var mainScreenTitle = app.otherElements[.mainScreenIdentifier]
     private lazy var ratingButton = app.buttons[.rating]
+    private lazy var settingsButton = app.buttons[.settings]
     
     // MARK: - Actions
     
@@ -31,6 +35,13 @@ final class MeowleSearchCatPage: BasePage {
     @discardableResult
     func tapRatingButton() -> MeowleRatingPage {
         ratingButton.tap()
+        return MeowleRatingPage()
+    }
+    
+    //Тап по табе "Рейтинг"
+    @discardableResult
+    func tapSettingsButton() -> MeowleRatingPage {
+        settingsButton.tap()
         return MeowleRatingPage()
     }
     
@@ -59,6 +70,13 @@ final class MeowleSearchCatPage: BasePage {
     @discardableResult
     func tapSearchButtonWithAccessibilityIdentifyer() -> MeowleSearchCatPage {
         searchButtonWithIdentifyer.tap()
+        return self
+    }
+    
+    // Тапнуть по кнопке c прописанным accessibilityIdentifyer
+    @discardableResult
+    func tapAllNamesButton() -> MeowleSearchCatPage {
+        allNamesButtonWithIdentifyer.tap()
         return self
     }
     
